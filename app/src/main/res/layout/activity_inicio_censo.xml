@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/txtEjecutivo"
+        app:layout_constraintStart_toEndOf="@+id/txtEjecutivo"
+        tools:context=".InicioCensoActivity">
+
+
+        <TextView
+            android:id="@+id/lblEjecutivo"
+            android:layout_width="92dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="14dp"
+            android:text="@string/no_ejecutivo"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/txtEjecutivo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtEjecutivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="193dp"
+            android:text="@string/ceros"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lblEjecutivo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblSistema"
+            android:layout_width="383dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:text="@string/registrados_en_sistema"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.482"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblEjecutivo" />
+
+        <TextView
+            android:id="@+id/lblCuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Cuenta SACMEX:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblSistema" />
+
+        <TextView
+            android:id="@+id/txtCuenta"
+            android:layout_width="235dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="9dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lblCuenta"
+            app:layout_constraintTop_toBottomOf="@+id/lblSistema" />
+
+        <TextView
+            android:id="@+id/lblCalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Calle:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblCuenta" />
+
+        <TextView
+            android:id="@+id/txtCalle"
+            android:layout_width="311dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/lblCalle"
+            app:layout_constraintTop_toBottomOf="@+id/txtCuenta" />
+
+        <TextView
+            android:id="@+id/lblExterior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="No. Exterior:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblCalle" />
+
+        <TextView
+            android:id="@+id/txtExterior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/ceros"
+            app:layout_constraintStart_toEndOf="@+id/lblExterior"
+            app:layout_constraintTop_toBottomOf="@+id/txtCalle" />
+
+        <TextView
+            android:id="@+id/lblInterior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="No. Interior:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/txtExterior"
+            app:layout_constraintTop_toBottomOf="@+id/txtCalle" />
+
+        <TextView
+            android:id="@+id/txtInterior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/ceros"
+            app:layout_constraintStart_toEndOf="@+id/lblInterior"
+            app:layout_constraintTop_toBottomOf="@+id/txtCalle" />
+
+        <TextView
+            android:id="@+id/lblColonia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Colonia:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblExterior" />
+
+        <TextView
+            android:id="@+id/txtColonia"
+            android:layout_width="299dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/lblColonia"
+            app:layout_constraintTop_toBottomOf="@+id/lblInterior" />
+
+        <TextView
+            android:id="@+id/lblCodigoPostal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="1dp"
+            android:text="C.P.:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblColonia" />
+
+        <TextView
+            android:id="@+id/txtCodigoPostal"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/ceros"
+            app:layout_constraintStart_toEndOf="@+id/lblCodigoPostal"
+            app:layout_constraintTop_toBottomOf="@+id/txtColonia" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="368dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCodigoPostal" />
+
+        <TextView
+            android:id="@+id/lblUso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Uso:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <TextView
+            android:id="@+id/txtUso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="@string/ceros"
+            app:layout_constraintStart_toEndOf="@+id/lblUso"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <TextView
+            android:id="@+id/lblViviendas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="No. Viviendas:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/txtUso"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <TextView
+            android:id="@+id/txtViviendas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ceros"
+            app:layout_constraintStart_toEndOf="@+id/lblViviendas"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <TextView
+            android:id="@+id/lblLocales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="No. Locales:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblUso" />
+
+        <TextView
+            android:id="@+id/txtLocales"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/ceros"
+            app:layout_constraintStart_toEndOf="@+id/lblLocales"
+            app:layout_constraintTop_toBottomOf="@+id/lblViviendas" />
+
+        <TextView
+            android:id="@+id/lblDiamToma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Diam. Toma:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/txtLocales"
+            app:layout_constraintTop_toBottomOf="@+id/lblViviendas" />
+
+        <TextView
+            android:id="@+id/txtDiamToma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/ceros"
+            app:layout_constraintStart_toEndOf="@+id/lblDiamToma"
+            app:layout_constraintTop_toBottomOf="@+id/txtViviendas" />
+
+        <TextView
+            android:id="@+id/lblSerieMedidor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Serie del Medidor:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblLocales" />
+
+        <TextView
+            android:id="@+id/txtSerieMedidor"
+            android:layout_width="226dp"
+            android:layout_height="18dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/lblSerieMedidor"
+            app:layout_constraintTop_toBottomOf="@+id/lblDiamToma" />
+
+        <TextView
+            android:id="@+id/lblMarcaMedidor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Marca del Medidor:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblSerieMedidor" />
+
+        <TextView
+            android:id="@+id/txtMarcaMedidor"
+            android:layout_width="234dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/lblMarcaMedidor"
+            app:layout_constraintTop_toBottomOf="@+id/txtSerieMedidor" />
+
+        <TextView
+            android:id="@+id/lblDiamMedidor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Diam.Medidor:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblMarcaMedidor" />
+
+        <TextView
+            android:id="@+id/txtDiamMedidor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ceros"
+            app:layout_constraintStart_toEndOf="@+id/lblDiamMedidor"
+            app:layout_constraintTop_toBottomOf="@+id/lblMarcaMedidor" />
+
+        <TextView
+            android:id="@+id/lblTomas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="No. Tomas:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/txtDiamMedidor"
+            app:layout_constraintTop_toBottomOf="@+id/txtMarcaMedidor" />
+
+        <TextView
+            android:id="@+id/txtTomas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/ceros"
+            app:layout_constraintStart_toEndOf="@+id/lblTomas"
+            app:layout_constraintTop_toBottomOf="@+id/txtMarcaMedidor" />
+
+        <android.support.v7.widget.GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="0dp"
+            android:layout_height="279dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="52dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDiamMedidor">
+
+            <!--ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_column="0"
+                app:layout_row="0"
+                app:srcCompat="@mipmap/qrcode" /-->
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_column="0"
+                app:layout_row="0"
+                app:srcCompat="@mipmap/camera" />
+
+            <!--Button
+                android:id="@+id/btnLectorQR"
+                android:layout_width="180dp"
+                android:layout_height="85dp"
+                android:onClick="sendLectorQR"
+                android:text="@string/LectorQR"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_column="2"
+                app:layout_row="0" /-->
+
+            <Button
+                android:id="@+id/btnTomaFoto"
+                android:layout_width="180dp"
+                android:layout_height="85dp"
+                android:onClick="tomaFotografia"
+                android:singleLine="false"
+                android:text="@string/TomarFotografia"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_column="2"
+                app:layout_row="0" />
+
+            <Button
+                android:id="@+id/btnGrabar"
+                android:layout_width="180dp"
+                android:layout_height="85dp"
+                android:onClick="verificaCampo"
+                android:text="Verificar datos de campo"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_column="2"
+                app:layout_row="1" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_column="0"
+                app:layout_row="1"
+                app:srcCompat="@mipmap/gps" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_column="0"
+                app:layout_row="2"
+                app:srcCompat="@mipmap/back" />
+
+            <Button
+                android:id="@+id/btnRegresar"
+                android:layout_width="180dp"
+                android:layout_height="83dp"
+                android:onClick="regresarCenso"
+                android:text="@string/regresar"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_column="2"
+                app:layout_row="2" />
+
+        </android.support.v7.widget.GridLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

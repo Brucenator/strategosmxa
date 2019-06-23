@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".InicioLecturasActivity"
+        tools:layout_editor_absoluteY="81dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="1dp"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
+            tools:layout_editor_absoluteX="7dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtOficio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Oficio" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayout3"
+            android:layout_width="369dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            tools:layout_editor_absoluteX="6dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtManzana"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/InicioManzana"
+                android:maxLength="10" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/lblEjecutivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/NoEjecutivo"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtEjecutivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="0000000000"
+            app:layout_constraintStart_toEndOf="@+id/lblEjecutivo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="0dp"
+            android:layout_height="367dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_column="0"
+                app:layout_row="0"
+                app:srcCompat="@mipmap/qrcode" />
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_column="0"
+                app:layout_row="1"
+                app:srcCompat="@mipmap/camera" />
+
+            <Button
+                android:id="@+id/btnLectorQR"
+                android:layout_width="180dp"
+                android:layout_height="85dp"
+                android:onClick="sendLectorQR"
+                android:text="@string/LectorQR"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_column="2"
+                app:layout_row="0" />
+
+            <Button
+                android:id="@+id/btnTomaFoto"
+                android:layout_width="180dp"
+                android:layout_height="85dp"
+                android:onClick="sendFotografia"
+                android:singleLine="false"
+                android:text="@string/TomarFotografia"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_column="2"
+                app:layout_row="1" />
+
+            <Button
+                android:id="@+id/btnGrabar"
+                android:layout_width="180dp"
+                android:layout_height="85dp"
+                android:onClick="sendGrabar"
+                android:text="@string/botonGrabar"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_column="2"
+                app:layout_row="2" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_column="0"
+                app:layout_row="2"
+                app:srcCompat="@mipmap/save" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_column="0"
+                app:layout_row="3"
+                app:srcCompat="@mipmap/back" />
+
+            <Button
+                android:id="@+id/btnRegresar"
+                android:layout_width="180dp"
+                android:layout_height="83dp"
+                android:onClick="regresar"
+                android:text="@string/regresar"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_column="2"
+                app:layout_row="3" />
+
+        </android.support.v7.widget.GridLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayout5"
+            android:layout_width="371dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            app:layout_constraintTop_toBottomOf="@+id/lblEjecutivo"
+            tools:layout_editor_absoluteX="7dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtruta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="10"
+                android:hint="Ruta" />
+        </android.support.design.widget.TextInputLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

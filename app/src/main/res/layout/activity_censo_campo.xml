@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CensoCampoActivity">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayout4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:hint="Cuenta SACMEX"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtCuentaSACMEX"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cuenta SACMEX" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayout6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtCalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Calle" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayout7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="13dp"
+            app:layout_constraintEnd_toStartOf="@+id/textInputLayout8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout6">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtExterior"
+                android:layout_width="172dp"
+                android:layout_height="wrap_content"
+                android:hint="No. Exterior" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayout8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textInputLayout7"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout6">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtInterior"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="No. Interior" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayout9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtColonia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Colonia" />
+        </android.support.design.widget.TextInputLayout>
+
+        <EditText
+            android:id="@+id/txtCodigoPostal"
+            android:layout_width="243dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ems="10"
+            android:hint="C.P."
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@+id/txtUso"
+            app:layout_constraintHorizontal_bias="0.688"
+            app:layout_constraintStart_toEndOf="@+id/txtUso"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout9" />
+
+        <EditText
+            android:id="@+id/txtUso"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint="Uso"
+            android:inputType="number"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtViviendas"
+            app:layout_constraintEnd_toStartOf="@+id/txtViviendas"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/txtViviendas"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginBottom="46dp"
+            android:ems="10"
+            android:hint="No. Viviendas"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="@+id/txtDiamMedidor"
+            app:layout_constraintEnd_toStartOf="@+id/txtLocales"
+            app:layout_constraintStart_toEndOf="@+id/txtUso"
+            app:layout_constraintTop_toTopOf="@+id/txtCodigoPostal" />
+
+        <EditText
+            android:id="@+id/txtLocales"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:ems="10"
+            android:hint="No. Locales"
+            android:inputType="number"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtViviendas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtViviendas" />
+
+        <EditText
+            android:id="@+id/txtDiamMedidor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="4dp"
+            android:ems="10"
+            android:hint="Diam. Toma"
+            android:inputType="number"
+            app:layout_constraintEnd_toStartOf="@+id/textInputLayout10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCodigoPostal" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayout10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtDiamMedidor"
+            app:layout_constraintTop_toBottomOf="@+id/txtLocales">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtSerieMedidor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Serie del Medidor" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayout11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDiamMedidor">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtMarcaMedidor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Marca del Medidor" />
+        </android.support.design.widget.TextInputLayout>
+
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="5dp"
+            android:ems="10"
+            android:hint="Diam. Medidor"
+            android:inputType="number"
+            app:layout_constraintEnd_toStartOf="@+id/txtTomas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout11" />
+
+        <EditText
+            android:id="@+id/txtTomas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="9dp"
+            android:ems="10"
+            android:hint="No. Tomas"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/editText6"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout11" />
+
+        <EditText
+            android:id="@+id/txtObservaciones"
+            android:layout_width="372dp"
+            android:layout_height="73dp"
+            android:layout_marginStart="7dp"
+            android:ems="10"
+            android:hint="Observaciones"
+            android:inputType="textMultiLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText6" />
+
+        <android.support.v7.widget.GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="0dp"
+            android:layout_height="190dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="52dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtObservaciones">
+
+            <!--ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_column="0"
+                app:layout_row="0"
+                app:srcCompat="@mipmap/qrcode" /-->
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_column="0"
+                app:layout_row="0"
+                app:srcCompat="@mipmap/save" />
+
+            <!--Button
+                android:id="@+id/btnLectorQR"
+                android:layout_width="180dp"
+                android:layout_height="85dp"
+                android:onClick="sendLectorQR"
+                android:text="@string/LectorQR"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_column="2"
+                app:layout_row="0" /-->
+
+            <Button
+                android:id="@+id/btnTomaFoto"
+                android:layout_width="180dp"
+                android:layout_height="85dp"
+                android:onClick="sendGrabar"
+                android:singleLine="false"
+                android:text="@string/botonGrabar"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_column="2"
+                app:layout_row="0" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_column="0"
+                app:layout_row="1"
+                app:srcCompat="@mipmap/back" />
+
+            <Button
+                android:id="@+id/btnRegresar"
+                android:layout_width="180dp"
+                android:layout_height="83dp"
+                android:onClick="regresar"
+                android:text="@string/regresar"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_column="2"
+                app:layout_row="1" />
+
+        </android.support.v7.widget.GridLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

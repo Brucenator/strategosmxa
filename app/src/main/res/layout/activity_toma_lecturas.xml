@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TomaLecturasActivity">
+
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="305dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="168dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginStart="19dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButton8"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@mipmap/pencil" />
+
+        <ImageButton
+            android:id="@+id/imageButton9"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:layout_column="0"
+            app:layout_row="1"
+            app:srcCompat="@mipmap/download" />
+
+        <Button
+            android:id="@+id/btnCaptura"
+            android:layout_width="190dp"
+            android:layout_height="85dp"
+            android:text="@string/botonCaptura"
+            android:textAlignment="viewStart"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_column="2"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/btnDescarga"
+            android:layout_width="189dp"
+            android:layout_height="82dp"
+            android:text="@string/botonDescarga"
+            android:textAlignment="viewStart"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_column="2"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/btnRegresar"
+            android:layout_width="187dp"
+            android:layout_height="78dp"
+            android:text="@string/modulo"
+            android:textAlignment="viewStart"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_column="2"
+            app:layout_row="3" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            app:layout_column="0"
+            app:layout_row="3"
+            app:srcCompat="@mipmap/back" />
+
+    </android.support.v7.widget.GridLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/noEjecutivo"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="46dp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/idEjecutivo"
+            android:layout_width="234dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/NoEjecutivo" />
+    </android.support.design.widget.TextInputLayout>
+
+</android.support.constraint.ConstraintLayout>

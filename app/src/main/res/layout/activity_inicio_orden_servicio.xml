@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".InicioOrdenServicioActivity">
+
+        <android.support.v7.widget.GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="0dp"
+            android:layout_height="338dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="45dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtClaveServicio">
+
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_column="0"
+                app:layout_row="0"
+                app:srcCompat="@mipmap/qrcode" />
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_column="0"
+                app:layout_row="1"
+                app:srcCompat="@mipmap/camera" />
+
+            <Button
+                android:id="@+id/btnLectorQR"
+                android:layout_width="180dp"
+                android:layout_height="85dp"
+                android:onClick="sendLectorQR"
+                android:text="@string/LectorQR"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_column="2"
+                app:layout_row="0" />
+
+            <Button
+                android:id="@+id/btnTomaFoto"
+                android:layout_width="180dp"
+                android:layout_height="82dp"
+                android:onClick="sendFotografia"
+                android:singleLine="false"
+                android:text="@string/TomarFotografia"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_column="2"
+                app:layout_row="1" />
+
+            <Button
+                android:id="@+id/btnGrabar"
+                android:layout_width="180dp"
+                android:layout_height="85dp"
+                android:onClick="sendGrabarCampo"
+                android:text="@string/botonGrabar"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_column="2"
+                app:layout_row="2" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_column="0"
+                app:layout_row="2"
+                app:srcCompat="@mipmap/save" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_column="0"
+                app:layout_row="3"
+                app:srcCompat="@mipmap/back" />
+
+            <Button
+                android:id="@+id/btnRegresar"
+                android:layout_width="180dp"
+                android:layout_height="83dp"
+                android:onClick="regresar"
+                android:text="@string/regresar"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_column="2"
+                app:layout_row="3" />
+
+        </android.support.v7.widget.GridLayout>
+
+        <TextView
+            android:id="@+id/txtInicioEjecutivo"
+            android:layout_width="60dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="116dp"
+            android:text="0000000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="143dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="29dp"
+            android:text="@string/NoEjecutivo"
+            app:layout_constraintEnd_toStartOf="@+id/txtInicioEjecutivo"
+            app:layout_constraintHorizontal_bias="0.74"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <AutoCompleteTextView
+            android:id="@+id/txtClaveServicio"
+            android:layout_width="322dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:completionHint="Clave de Servicio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout13" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayout13"
+            android:layout_width="326dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="41dp"
+            android:layout_marginBottom="9dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtClaveServicio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtOrdenServicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Orden de Servicio" />
+        </android.support.design.widget.TextInputLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
